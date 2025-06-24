@@ -11,7 +11,7 @@ const Button = ({ className, href, onClick, children, px, white }) => {
 
   // Trả về một thẻ button với class đã xử lý ở trên
   const renderButton = () => (
-    <button className={classes}>
+    <button className={classes} onClick={onClick}>
       {/* children là nội dung do người dùng truyền vào */}
       <span className={spanClasses}>{children}</span>
       {/* Hiển thị icon SVG đi kèm, màu phụ thuộc vào prop 'white' */}
