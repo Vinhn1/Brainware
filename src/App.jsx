@@ -2,6 +2,7 @@ import ButtonGradient from "./assets/svg/ButtonGradient";
 import Button from "./components/Button";
 import "./index.css";
 import Header from "./components/Header";
+import Hero from "./components/Hero";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
         {/* Header */}
         <Header/>
         {/* Hero  */}
+        <Hero/>
         {/* Benefits  */}
         {/* Collaboration  */}
         {/* Services  */}
