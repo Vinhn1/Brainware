@@ -4,6 +4,7 @@ import "./index.css";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Benefits from "./components/Benefits";
+import Collaboration from "./components/Collaboration";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         {/* Benefits  */}
         <Benefits/>
         {/* Collaboration  */}
+        <Collaboration/>
         {/* Services  */}
         {/* Pricing  */}
         {/* Roadmap  */}
