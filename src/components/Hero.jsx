@@ -7,6 +7,7 @@ import { BackgroundCircles, BottomLine, Gradient } from "./design/Hero";
 import { heroIcons } from "../constants";
 // thư viện hiệu ứng parallax nhẹ, mượt mà và đơn giản dành cho ReactJS.
 import { ScrollParallax } from "react-just-parallax";
+import Generating from "./Generating";
 
 const Hero = () => {
   const parallaxRef = useRef(null);
@@ -68,6 +69,9 @@ const Hero = () => {
                   height={490}
                   className="w-full scale-[1.7] translate-y-[8%] md:scale-[1] md:-translate-y-[10%] lg:-translate-y-[23%]" // Hiện tại vẫn còn scale và translate-y, cần điều chỉnh lại nếu muốn hình hiển thị đầy đủ
                 />
+
+                {/* Hiển thị thanh trạng thái loading bên dưới img*/}
+                <Generating className="absolute left-4 right-4 bottom-4 md:left-1/2 md:right-auto md:bottom-8 md:w-[31rem] md:-translate-x-1/2" />
 
                 {/* Hiệu ứng parallax cho dải icon bên trái hình robot, chỉ hiển thị trên màn hình lớn (xl) */}
                 <ScrollParallax isAbsolutelyPositioned>
