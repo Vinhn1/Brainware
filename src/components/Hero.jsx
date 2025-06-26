@@ -8,6 +8,7 @@ import { heroIcons } from "../constants";
 // thư viện hiệu ứng parallax nhẹ, mượt mà và đơn giản dành cho ReactJS.
 import { ScrollParallax } from "react-just-parallax";
 import Generating from "./Generating";
+import Notification from "./Notification";
 
 const Hero = () => {
   const parallaxRef = useRef(null);
@@ -82,6 +83,14 @@ const Hero = () => {
                       </li>
                     ))}
                   </ul>
+                </ScrollParallax>
+
+                {/* Hiệu ứng parallax cho thông báo (notification) bên phải hình robot, chỉ hiển thị trên màn hình lớn (xl) */}
+                <ScrollParallax isAbsolutelyPositioned>
+                  <Notification
+                    className="hidden absolute -right-[5.5rem] bottom-[11rem] w-[18rem] xl:flex"
+                    title="Code generation"
+                  />
                 </ScrollParallax>
               </div>
             </div>
