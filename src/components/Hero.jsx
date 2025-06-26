@@ -9,6 +9,7 @@ import { heroIcons } from "../constants";
 import { ScrollParallax } from "react-just-parallax";
 import Generating from "./Generating";
 import Notification from "./Notification";
+import CompanyLogos from "./CompanyLogos";
 
 const Hero = () => {
   const parallaxRef = useRef(null);
@@ -71,8 +72,11 @@ const Hero = () => {
                   className="w-full scale-[1.7] translate-y-[8%] md:scale-[1] md:-translate-y-[10%] lg:-translate-y-[23%]" // Hiện tại vẫn còn scale và translate-y, cần điều chỉnh lại nếu muốn hình hiển thị đầy đủ
                 />
 
-                {/* Hiển thị thanh trạng thái loading bên dưới img*/}
-                <Generating className="absolute left-4 right-4 bottom-4 md:left-1/2 md:right-auto md:bottom-8 md:w-[31rem] md:-translate-x-1/2" />
+                {/* Thêm chuyển động Scroll mượt mà */}
+                <ScrollParallax isAbsolutelyPositioned>
+                  {/* Hiển thị thanh trạng thái loading bên dưới img*/}
+                  <Generating className="absolute left-4 right-4 bottom-4 md:left-1/2 md:right-auto md:bottom-8 md:w-[31rem] md:-translate-x-1/2" />
+                </ScrollParallax>
 
                 {/* Hiệu ứng parallax cho dải icon bên trái hình robot, chỉ hiển thị trên màn hình lớn (xl) */}
                 <ScrollParallax isAbsolutelyPositioned>
@@ -110,6 +114,9 @@ const Hero = () => {
           {/* Các vòng tròn gradient động phía sau hình robot, tạo chiều sâu cho hero */}
           <BackgroundCircles />
         </div>
+        
+        {/* Hiển thị tiêu đề và danh sách logos công ty */}
+        <CompanyLogos className="hidden relative z-10 mt-20 lg:block"/>
       </div>
       {/* Đường kẻ gradient phía dưới cùng section hero */}
       <BottomLine />
