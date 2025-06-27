@@ -7,6 +7,7 @@ import Benefits from "./components/Benefits";
 import Collaboration from "./components/Collaboration";
 import Services from "./components/Services";
 import Pricing from "./components/Pricing";
+import Roadmap from "./components/Roadmap";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         {/* Pricing  */}
         <Pricing/>
         {/* Roadmap  */}
+        <Roadmap/>
         {/* Footer */}
       </div>
       {/* ButtonGradients: kho màu gradient để xài lại nhiều lần */}
